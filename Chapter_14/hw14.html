@@ -1,0 +1,42 @@
+<!--Homework 14
+* Author: Anthony Shephard
+* Project Purpose: design a form
+* Input: 3 text boxes, a set of radio buttons, a submit button
+* Desired Output: alert as success or failure
+* Variables and Classes: toMatch, dom objects, input values
+* Formulas: none
+* Description of the main algorithm: get input, validate, get output
+* March 26, 2017
+-->
+<html>
+<head>
+  <title>Schedule Appointment</title>
+  <script type="text/javascript" src="./hwjs14.js"></script>
+</head>
+<body>
+  <div>
+    <h3>Schedule an appointment with one of our doctors</h3>
+  </div>
+  <form id="appointForm" name="appointForm">
+    <table>
+      <tr>
+        <td><label for="person">Full Name:</label></td>
+        <td><input type="text" id="person" name="person" pattern="^[A-Za-z ,.'-]+$" placeholder="First Last" required/></td>
+      </tr>
+        <td><label for="phone">Phone Number:</label></td>
+        <td><input type="text" id="phone" name="phone" pattern="^\d{3}\W\d{3}\W\d{4}$" placeholder="xxx-xxx-xxxx" required></td>
+      </tr>
+    </table>
+  <fieldset style="display:inline-block">
+    <legend>Sex:</legend>
+    <label for="male">Male </label>
+      <input type="radio" id="male" name="gender" value="male" required/>
+    <label for="female">Female </label>
+      <input type="radio" id="female" name="gender" value="female" required/>
+  </fieldset><br>
+    <label for="reason">Reason for visit:</label><br>
+    <textarea id="reason" name="reason" placeholder="Checkup, Fever, Cough, etc..." rows="5" cols="40" required/></textarea><br><br>
+    <input type="submit" value="Request Appointment" name="submitAppoint"><br>
+  </form>
+</body>
+</html>

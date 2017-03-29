@@ -1,0 +1,23 @@
+<!--Try This 14-2
+* Author: Anthony Shephard
+* Project Purpose: Request a phone number and validate using HTML or JS
+* Input: form with text box and submit
+* Desired Output: alert as success or failure
+* Variables and Classes: toMatch, dom objects, input values
+* Formulas: none
+* Description of the main algorithm: get input, validate, get output
+* March 26, 2017
+-->
+<html>
+<head>
+  <title>Try This 14-2</title>
+  <script type="text/javascript" src="./prjs14_2.js"></script>
+</head>
+<body>
+  <form id="phoneForm" name="phoneForm">
+    <label for="phone">Phone number (XXX-XXX-XXXX):</label>
+      <input type="text" id="phone" name="phone" pattern="^\d{3}\W\d{3}\W\d{4}$" required><br><br>
+    <input type="submit" value="Submit Phone Number" name="submitPhone"><br>
+  </form>
+</body>
+</html>
